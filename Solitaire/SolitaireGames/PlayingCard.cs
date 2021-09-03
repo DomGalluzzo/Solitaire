@@ -25,12 +25,22 @@ namespace Solitaire.SolitaireGames
             }
         }
 
-        //public int Value
-        //{
-        //    get
-        //    {
+        public int Value
+        {
+            get
+            {
+                CardType cardType = new();
+                return ((int)cardType) % 13;
+            }
+        }
 
-        //    }
-        //}
+        public CardColor Color
+        {
+            get
+            {
+                CardType cardType = new();
+                return ((int)cardType) < 26 ? CardColor.Red : CardColor.Black;
+            }
+        }
     }
 }
